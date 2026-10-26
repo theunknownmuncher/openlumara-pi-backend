@@ -1,0 +1,53 @@
+# Python bytecode / import caches created while OpenLumara imports the module
+__pycache__/
+# (.pyc / .pyo / .pyd)
+*.py[cod]
+
+# Virtualenvs used to run OpenLumara with this module enabled
+venv/
+.venv/
+env/
+
+# Test, coverage and lint output.
+# reports/ is the pytest-html report: the parent OpenLumara checkout's pytest.ini
+# passes --html=reports/test-report.html, a path relative to the cwd, so running
+# the suite from this directory drops it here.
+.pytest_cache/
+reports/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.mypy_cache/
+.ruff_cache/
+
+# Packaging - this module is loaded in place from OpenLumara's user_modules/,
+# never built or installed, so keep build droppings out of the repo.
+build/
+dist/
+*.egg
+*.egg-info/
+
+# Node droppings. The pi extensions (pi_*_extension.js) are loaded by pi via
+# --extension and have no npm dependencies; if one is ever experimented with
+# locally, keep the install output out of the repo.
+node_modules/
+npm-debug.log*
+
+# Editors
+*~
+*.swp
+*.swo
+*.kate-swp
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ad-hoc scratch a debugging session tends to leave behind
+*.log
+*.bak
+tmp/
